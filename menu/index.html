@@ -21,7 +21,7 @@
 
     <!-- CSS -->
 
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/menu.css">
 
 </head>
 <body>
@@ -40,11 +40,8 @@
             <li><a href="../index.html">Beranda</a></li>
             <li><a href="../about/index.html">Tentang</a></li>
             <li><a class="active" href="../menu/index.html">Menu</a></li>
+            <li><a href="../order/index.html">Pesanan</a></li>
         </ul>
-
-        <button class="order-btn">
-            Pesan Sekarang
-        </button>
 
     </nav>
 
@@ -54,7 +51,7 @@
 
         <div class="contactbar-left">
             <span>
-                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-brands fa-whatsapp"></i>
                 (+62) 857-1912-2564
             </span>
 
@@ -72,39 +69,135 @@
 
     </div>
 
-    <!-- Hero -->
+    <!-- Menu Container -->
 
-    <section class="hero">
+    <div class="menu-container">
 
-        <div class="hero-content">
+        <!-- Catering Section -->
 
-            <span class="hero-tag">
-                Homemade • Fresh • Delicious
-            </span>
+        <div class="section-header">
+            <h2><i class="fa-solid fa-utensils"></i> Menu Katering</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn" id="scrollCateringLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn" id="scrollCateringRightBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
 
-            <h2>
-                Dessert manis<br>
-                untuk hari manis 🍰
-            </h2>
+        <div class="scroll-wrapper" id="cateringWrapper">
+            <div class="menu-cards" id="cateringCardsContainer">
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Nasi+Box+Spesial" alt="Nasi Box Spesial" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Nasi Box Spesial</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 35.000</div>
+                        <div class="desc">Nasi hangat, ayam goreng, sambal, tahu tempe, lalapan.</div>
+                        <button class="order-small" data-name="Nasi Box Spesial" data-price="35000">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Rendang+Paket" alt="Rendang Paket"></div>
+                    <div class="card-content">
+                        <h3>Paket Rendang</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 48.000</div>
+                        <div class="desc">Rendang daging sapi, nasi putih, kerupuk, acar.</div>
+                        <button class="order-small" data-name="Paket Rendang" data-price="48000">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ayam+Penyet" alt="Ayam Penyet"></div>
+                    <div class="card-content">
+                        <h3>Ayam Penyet Ekstra</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 32.000</div>
+                        <div class="desc">Ayam kampung goreng, sambal terasi, lalapan segar.</div>
+                        <button class="order-small" data-name="Ayam Penyet Ekstra" data-price="32000">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ikan+Bakar" alt="Ikan Bakar"></div>
+                    <div class="card-content">
+                        <h3>Ikan Bakar Cakalang</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 55.000</div>
+                        <div class="desc">Ikan segar bakar bumbu rahasia, sambal dabu-dabu.</div>
+                        <button class="order-small" data-name="Ikan Bakar Cakalang" data-price="55000">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Gulai+Kambing" alt="Gulai Kambing"></div>
+                    <div class="card-content">
+                        <h3>Gulai Kambing</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 68.000</div>
+                        <div class="desc">Gulai kambing rempah, nasi putih, dan emping.</div>
+                        <button class="order-small" data-name="Gulai Kambing" data-price="68000">Pesan Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <p>
-                Nikmati dessert homemade dengan rasa lembut,
-                manis, dan dibuat penuh cinta untuk setiap momen spesialmu.
-            </p>
+        <!-- Snack Section -->
 
-            <div class="hero-buttons">
-                <button class="primary-btn">
-                    Lihat Menu
-                </button>
-
-                <button class="secondary-btn">
-                    Hubungi Kami
-                </button>
+        <div class="section-header snack-section">
+            <h2><i class="fa-solid fa-mug-hot"></i> Aneka Snack & Cemilan</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn" id="scrollSnackLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn" id="scrollSnackRightBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="scroll-wrapper" id="snackWrapper">
+            <div class="menu-cards" id="snackCardsContainer">
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Klepon+Lumer" alt="Klepon Lumer"></div>
+                    <div class="card-content">
+                        <h3>Klepon Lumer</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 15.000</div>
+                        <div class="desc">5 pcs klepon isi gula merah, taburan kelapa.</div>
+                        <button class="order-small" data-name="Klepon Lumer" data-price="15000">Pesan Snack</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Lumpia+Basah" alt="Lumpia Basah"></div>
+                    <div class="card-content">
+                        <h3>Lumpia Basah</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 12.000</div>
+                        <div class="desc">Isi rebung, telur, sayuran, saus kacang.</div>
+                        <button class="order-small" data-name="Lumpia Basah" data-price="12000">Pesan Snack</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Pisang+Goreng" alt="Pisang Goreng"></div>
+                    <div class="card-content">
+                        <h3>Pisang Goreng Madu</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 18.000</div>
+                        <div class="desc">Pisang kepok crispy, topping keju & meses.</div>
+                        <button class="order-small" data-name="Pisang Goreng Madu" data-price="18000">Pesan Snack</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Martabak+Mini" alt="Martabak Mini"></div>
+                    <div class="card-content">
+                        <h3>Martabak Mini</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 22.000</div>
+                        <div class="desc">6 pcs martabak manis coklat kacang.</div>
+                        <button class="order-small" data-name="Martabak Mini" data-price="22000">Pesan Snack</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Kue+Lapis" alt="Kue Lapis"></div>
+                    <div class="card-content">
+                        <h3>Kue Lapis Tradisional</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 10.000</div>
+                        <div class="desc">Lembut, legit, 3 lapis warna alami.</div>
+                        <button class="order-small" data-name="Kue Lapis Tradisional" data-price="10000">Pesan Snack</button>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
 
-    </section>
+    <!-- Scripts -->
+
+    <script src="../js/horizontalScroll.js"></script>
 
 </body>
 </html>
