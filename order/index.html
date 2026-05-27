@@ -69,5 +69,71 @@
 
     </div>
 
+    <!-- Order Container -->
+
+    <div class="menu-container">
+
+        <!-- Catering Section -->
+
+        <div class="section-header">
+            <h2><i class="fa-solid fa-shopping-cart"></i> Pesanan Saya</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn" id="scrollCateringLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn" id="scrollCateringRightBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="scroll-wrapper" id="cateringWrapper">
+            <div class="menu-cards" id="cateringCardsContainer">
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Nasi+Box+Spesial" alt="Nasi Box Spesial" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Nasi Box Spesial</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 35.000</div>
+                        <div class="desc">Nasi hangat, ayam goreng, sambal, tahu tempe, lalapan.</div>
+                        <button class="order-small" onclick="openOrderPrompt('Nasi Box Spesial', 35000)">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Rendang+Paket" alt="Rendang Paket"></div>
+                    <div class="card-content">
+                        <h3>Paket Rendang</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 48.000</div>
+                        <div class="desc">Rendang daging sapi, nasi putih, kerupuk, acar.</div>
+                        <button class="order-small" onclick="openOrderPrompt('Paket Rendang', 48000)">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ayam+Penyet" alt="Ayam Penyet"></div>
+                    <div class="card-content">
+                        <h3>Ayam Penyet Ekstra</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 32.000</div>
+                        <div class="desc">Ayam kampung goreng, sambal terasi, lalapan segar.</div>
+                        <button class="order-small" onclick="openOrderPrompt('Ayam Penyet Ekstra', 32000)">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ikan+Bakar" alt="Ikan Bakar"></div>
+                    <div class="card-content">
+                        <h3>Ikan Bakar Cakalang</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 55.000</div>
+                        <div class="desc">Ikan segar bakar bumbu rahasia, sambal dabu-dabu.</div>
+                        <button class="order-small" onclick="openOrderPrompt('Ikan Bakar Cakalang', 55000)">Pesan Menu</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Gulai+Kambing" alt="Gulai Kambing"></div>
+                    <div class="card-content">
+                        <h3>Gulai Kambing</h3>
+                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 68.000</div>
+                        <div class="desc">Gulai kambing rempah, nasi putih, dan emping.</div>
+                        <button class="order-small" onclick="openOrderPrompt('Gulai Kambing', 68000)">Pesan Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
 </body>
 </html>
