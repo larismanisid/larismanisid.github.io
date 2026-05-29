@@ -17,6 +17,3 @@ function setupHorizontalScroll(wrapperId, leftBtnId, rightBtnId) {
         });
     }
 }
-
-setupHorizontalScroll("cateringWrapper", "scrollCateringLeftBtn", "scrollCateringRightBtn");
-setupHorizontalScroll("snackWrapper", "scrollSnackLeftBtn", "scrollSnackRightBtn");

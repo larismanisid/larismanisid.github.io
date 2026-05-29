@@ -38,7 +38,6 @@
 
         <ul class="nav-links">
             <li><a href="../index.html">Beranda</a></li>
-            <li><a href="../about/index.html">Tentang</a></li>
             <li><a href="../menu/index.html">Menu</a></li>
             <li><a class="active" href="../order/index.html">Pesanan</a></li>
         </ul>
@@ -71,69 +70,147 @@
 
     <!-- Order Container -->
 
-    <div class="menu-container">
+    <div class="order-container">
 
-        <!-- Catering Section -->
+        <!-- Orders -->
 
         <div class="section-header">
             <h2><i class="fa-solid fa-shopping-cart"></i> Pesanan Saya</h2>
             <div class="scroll-buttons">
-                <button class="scroll-btn" id="scrollCateringLeftBtn"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn" id="scrollCateringRightBtn"><i class="fas fa-chevron-right"></i></button>
+                <button class="scroll-btn" id="scrollOrderLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn" id="scrollOrderRightBtn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
 
-        <div class="scroll-wrapper" id="cateringWrapper">
-            <div class="menu-cards" id="cateringCardsContainer">
-                <div class="card">
-                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Nasi+Box+Spesial" alt="Nasi Box Spesial" loading="lazy"></div>
-                    <div class="card-content">
-                        <h3>Nasi Box Spesial</h3>
-                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 35.000</div>
-                        <div class="desc">Nasi hangat, ayam goreng, sambal, tahu tempe, lalapan.</div>
-                        <button class="order-small" onclick="openOrderPrompt('Nasi Box Spesial', 35000)">Pesan Menu</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Rendang+Paket" alt="Rendang Paket"></div>
-                    <div class="card-content">
-                        <h3>Paket Rendang</h3>
-                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 48.000</div>
-                        <div class="desc">Rendang daging sapi, nasi putih, kerupuk, acar.</div>
-                        <button class="order-small" onclick="openOrderPrompt('Paket Rendang', 48000)">Pesan Menu</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ayam+Penyet" alt="Ayam Penyet"></div>
-                    <div class="card-content">
-                        <h3>Ayam Penyet Ekstra</h3>
-                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 32.000</div>
-                        <div class="desc">Ayam kampung goreng, sambal terasi, lalapan segar.</div>
-                        <button class="order-small" onclick="openOrderPrompt('Ayam Penyet Ekstra', 32000)">Pesan Menu</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Ikan+Bakar" alt="Ikan Bakar"></div>
-                    <div class="card-content">
-                        <h3>Ikan Bakar Cakalang</h3>
-                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 55.000</div>
-                        <div class="desc">Ikan segar bakar bumbu rahasia, sambal dabu-dabu.</div>
-                        <button class="order-small" onclick="openOrderPrompt('Ikan Bakar Cakalang', 55000)">Pesan Menu</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img"><img src="https://placehold.co/400x300/efe7f7/3d3552?text=Gulai+Kambing" alt="Gulai Kambing"></div>
-                    <div class="card-content">
-                        <h3>Gulai Kambing</h3>
-                        <div class="price"><i class="fa-solid fa-tag"></i> Rp 68.000</div>
-                        <div class="desc">Gulai kambing rempah, nasi putih, dan emping.</div>
-                        <button class="order-small" onclick="openOrderPrompt('Gulai Kambing', 68000)">Pesan Menu</button>
-                    </div>
-                </div>
-            </div>
+        <div class="scroll-wrapper" id="orderWrapper"></div>
+
+        <!-- Price Total -->
+
+        <div class="section-header">
+            <h2><i class="fa-solid fa-tag"></i> Total Harga</h2>
         </div>
-        
+
+        <div id="totalPrice"></div>
+        <br>
+        <br>
+
+        <!-- Payment Methods -->
+
+        <div class="section-header">
+            <h2><i class="fa-solid fa-credit-card"></i> Metode Pembayaran</h2>
+        </div>
+
+        <div id="paymentMethods">
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    class="payment-btn"
+                    name="paymentMethod"
+                    id="cashPayment"
+                    value="cash"
+                    checked
+                >
+
+                <label for="cashPayment"> <i class="fa-solid fa-money-bill-wave"></i> Tunai</label>
+
+            </div>
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    class="payment-btn"
+                    name="paymentMethod"
+                    id="qrisPayment"
+                    value="qris"
+                >
+
+                <label for="qrisPayment"><i class="fa-solid fa-qrcode"></i> QRIS</label>
+
+            </div>
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    class="payment-btn"
+                    name="paymentMethod"
+                    id="transferPayment"
+                    value="transfer"
+                >
+
+                <label for="transferPayment"><i class="fa-solid fa-credit-card"></i> Transfer</label>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <!-- Delivery Infos -->
+
+        <div class="section-header">
+            <h2><i class="fa-solid fa-truck"></i> Pengantaran Pesanan</h2>
+        </div>
+
+        <div class="delivery-infos">
+
+            <label for="customerName"><i class="fa-solid fa-user"></i> Nama Penerima</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Contoh: Bu Siti"
+                required
+            >
+            <br>
+
+            <label for="customerPhone"><i class="fa-solid fa-phone"></i> Nomor Telpon Penerima</label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" 
+                placeholder="Contoh: 0812-3456-7890"
+                required
+            >
+            <br>
+
+            <label for="deliveryTime"><i class="fa-solid fa-clock"></i> Waktu Pengantaran</label>
+
+            <input
+                type="datetime-local"
+                id="deliveryTime"
+                required
+            >
+            <br>
+
+            <label for="customerAddress"><i class="fa-solid fa-map-marker-alt"></i> Alamat Lengkap</label>
+
+            <textarea 
+                id="customerAddress" 
+                rows="3" 
+                placeholder="Contoh: Jl. Anggrek No. 12, RT 03/RW 04, Kec. Meruya (Pagar warna hitam)"
+                required
+            ></textarea>
+            
+        </div>
+
+        <button id="placeOrderButton" onclick="placeOrder()"><i class="fa-solid fa-brands fa-whatsapp"></i> Pesan</button>
+
     </div>
+
+    <!-- Scripts -->
+     
+    <script src="../js/horizontalScroll.js"></script>
+    <script src="../js/orderPage.js"></script>
+    <script src="../js/placeOrder.js"></script>
+
+    <script>
+        setupHorizontalScroll("orderWrapper", "scrollOrderLeftBtn", "scrollOrderRightBtn");
+    </script>
 
 </body>
 </html>

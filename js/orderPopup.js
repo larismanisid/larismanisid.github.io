@@ -1,9 +1,10 @@
 let currentMenu = null;
 
-function openOrderPrompt(name, price) {
+function openOrderPrompt(name, price, image) {
     currentMenu = {
         name,
-        price
+        price,
+        image
     };
 
     document.getElementById("popupMenuName").innerText = `${name} • Rp ${price.toLocaleString("id-ID")}`;
@@ -34,6 +35,7 @@ function confirmOrder() {
         orders.push({
             name: currentMenu.name,
             price: currentMenu.price,
+            image: currentMenu.image,
             quantity: quantity,
             total: currentMenu.price * quantity
         });
